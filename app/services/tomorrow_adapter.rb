@@ -11,6 +11,7 @@ class TomorrowAdapter < WeatherAdapter
 
     # using :net_http_persistent reuses a single longer-lived socket reducing load on API
     conn = Faraday.new(**faraday_options) do |config|
+      config.request :instrumentation, name: 'forecast.faraday'
       config.response :json
       config.response :raise_error
       config.response :logger, Rails.logger, headers: false, bodies: true, log_level: :debug
