@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.weatherapi.com/v1/current.json?aqi=no&key=54321&q=55+Main+St%2C+Quincy%2C+MA+02169
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 26 May 2024 21:28:20 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept-Encoding
+      server:
+      - BunnyCDN-IL1-1068
+      cdn-pullzone:
+      - '93447'
+      cdn-uid:
+      - 8fa3a04a-75d9-4707-8056-b7b33c8ac7fe
+      cdn-requestcountrycode:
+      - US
+      age:
+      - '0'
+      cache-control:
+      - public, max-age=180
+      via:
+      - 1.1 varnish (Varnish/6.0)
+      x-weatherapi-qpm-left:
+      - '4999925'
+      x-varnish:
+      - '202612684'
+      cdn-proxyver:
+      - '1.04'
+      cdn-requestpullsuccess:
+      - 'True'
+      cdn-requestpullcode:
+      - '200'
+      cdn-cachedat:
+      - 05/26/2024 21:28:20
+      cdn-edgestorageid:
+      - '894'
+      cdn-status:
+      - '200'
+      cdn-requestid:
+      - a135a5bb42e85b2810191afe5e1c12cd
+      cdn-cache:
+      - MISS
+      content-encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: '{"location":{"name":"Quincy","region":"Massachusetts","country":"USA
+        United States of America","lat":42.24,"lon":-71.01,"tz_id":"America/New_York","localtime_epoch":1716758872,"localtime":"2024-05-26
+        17:27"},"current":{"last_updated_epoch":1716758100,"last_updated":"2024-05-26
+        17:15","temp_c":18.9,"temp_f":66.0,"is_day":1,"condition":{"text":"Partly
+        cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png","code":1003},"wind_mph":6.9,"wind_kph":11.2,"wind_degree":70,"wind_dir":"ENE","pressure_mb":1014.0,"pressure_in":29.94,"precip_mm":4.5,"precip_in":0.18,"humidity":81,"cloud":50,"feelslike_c":18.9,"feelslike_f":66.0,"vis_km":16.0,"vis_miles":9.0,"uv":4.0,"gust_mph":10.0,"gust_kph":16.1}}'
+  recorded_at: Sun, 26 May 2024 21:28:20 GMT
+recorded_with: VCR 6.2.0

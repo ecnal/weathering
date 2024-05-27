@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.weatherapi.com/v1/current.json?aqi=no&key=54321&q=02066
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 26 May 2024 21:28:20 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      vary:
+      - Accept-Encoding
+      server:
+      - BunnyCDN-IL1-1068
+      cdn-pullzone:
+      - '93447'
+      cdn-uid:
+      - 8fa3a04a-75d9-4707-8056-b7b33c8ac7fe
+      cdn-requestcountrycode:
+      - US
+      age:
+      - '0'
+      cache-control:
+      - public, max-age=180
+      via:
+      - 1.1 varnish (Varnish/6.0)
+      x-weatherapi-qpm-left:
+      - '4999925'
+      x-varnish:
+      - '306428634'
+      cdn-proxyver:
+      - '1.04'
+      cdn-requestpullsuccess:
+      - 'True'
+      cdn-requestpullcode:
+      - '200'
+      cdn-cachedat:
+      - 05/26/2024 21:28:20
+      cdn-edgestorageid:
+      - '845'
+      cdn-status:
+      - '200'
+      cdn-requestid:
+      - 82116b62f454fd2c6c74950787a9ce9b
+      cdn-cache:
+      - MISS
+      content-encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: '{"location":{"name":"Scituate","region":"Massachusetts","country":"USA","lat":42.2,"lon":-70.75,"tz_id":"America/New_York","localtime_epoch":1716758872,"localtime":"2024-05-26
+        17:27"},"current":{"last_updated_epoch":1716758100,"last_updated":"2024-05-26
+        17:15","temp_c":20.0,"temp_f":68.0,"is_day":1,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png","code":1000},"wind_mph":2.2,"wind_kph":3.6,"wind_degree":83,"wind_dir":"E","pressure_mb":1014.0,"pressure_in":29.94,"precip_mm":0.76,"precip_in":0.03,"humidity":73,"cloud":0,"feelslike_c":20.0,"feelslike_f":68.0,"vis_km":16.0,"vis_miles":9.0,"uv":4.0,"gust_mph":8.9,"gust_kph":14.3}}'
+  recorded_at: Sun, 26 May 2024 21:28:20 GMT
+recorded_with: VCR 6.2.0

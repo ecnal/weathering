@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.weatherapi.com/v1/current.json?aqi=no&key=54321&q=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      date:
+      - Sun, 26 May 2024 21:29:33 GMT
+      content-type:
+      - application/json
+      content-length:
+      - '63'
+      connection:
+      - keep-alive
+      server:
+      - BunnyCDN-IL1-845
+      cdn-pullzone:
+      - '93447'
+      cdn-uid:
+      - 8fa3a04a-75d9-4707-8056-b7b33c8ac7fe
+      cdn-requestcountrycode:
+      - US
+      age:
+      - '0'
+      cache-control:
+      - public, max-age=5
+      via:
+      - 1.1 varnish (Varnish/6.0)
+      x-weatherapi-qpm-left:
+      - '4999925'
+      x-varnish:
+      - '301028048'
+      cdn-proxyver:
+      - '1.04'
+      cdn-requestpullsuccess:
+      - 'True'
+      cdn-requestpullcode:
+      - '400'
+      cdn-cachedat:
+      - 05/26/2024 21:29:33
+      cdn-edgestorageid:
+      - '1029'
+      cdn-status:
+      - '400'
+      cdn-requestid:
+      - 8c56de5aeb2100898afb11a789d97a10
+      cdn-cache:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":1006,"message":"No matching location found."}}'
+  recorded_at: Sun, 26 May 2024 21:29:33 GMT
+recorded_with: VCR 6.2.0

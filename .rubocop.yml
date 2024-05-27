@@ -1,0 +1,26 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+  - rubocop-rails
+
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+  TargetRubyVersion: 3.2
+  NewCops: enable
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+
+Layout/LineLength:
+  Max: 120
+
+Rails/SaveBang:
+  Enabled: true

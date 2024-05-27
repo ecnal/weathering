@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.tomorrow.io/v4/weather/realtime?apikey=109876&location=London&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 26 May 2024 21:25:37 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      cf-ray:
+      - 88a0d6b9bd993021-BOS
+      cf-cache-status:
+      - DYNAMIC
+      access-control-allow-origin:
+      - "*"
+      content-encoding:
+      - gzip
+      via:
+      - 1.1 google
+      cf-apo-via:
+      - origin,host
+      x-correlation-id:
+      - 38a6fee1-64d0-4335-9b00-ee754cc73a05
+      x-db-credits-cost:
+      - '5'
+      x-kong-proxy-latency:
+      - '12'
+      x-kong-upstream-latency:
+      - '14'
+      x-request-id:
+      - 191ef264-feb6-4450-bf17-37eca6967896
+      set-cookie:
+      - __cf_bm=lrsMGrpWInnh.6DIRnQZBVctgpe7iYG9NZ48Jidd2ZU-1716758737-1.0.1.1-.H28VEbaUb5nYQrJMwN15LXYgNPYmDQTrthpG_uvWDf6XlmzHPr.mJ5YDOfLW36nTOAfAiOb1zt85T1WRCAc.Q;
+        path=/; expires=Sun, 26-May-24 21:55:37 GMT; domain=.tomorrow.io; HttpOnly;
+        Secure; SameSite=None
+      vary:
+      - Accept-Encoding
+      server:
+      - cloudflare
+    body:
+      encoding: UTF-8
+      string: '{"data":{"time":"2024-05-26T21:25:00Z","values":{"cloudBase":null,"cloudCeiling":null,"cloudCover":4,"dewPoint":49.33,"freezingRainIntensity":0,"humidity":80,"precipitationProbability":75,"pressureSurfaceLevel":29.86,"rainIntensity":0.01,"sleetIntensity":0,"snowIntensity":0,"temperature":55.18,"temperatureApparent":55.18,"uvHealthConcern":0,"uvIndex":0,"visibility":9.94,"weatherCode":4000,"windDirection":221.31,"windGust":14.82,"windSpeed":8.67}},"location":{"lat":51.5074462890625,"lon":-0.12776529788970947,"name":"London,
+        Greater London, England, United Kingdom","type":"city"}}'
+  recorded_at: Sun, 26 May 2024 21:25:37 GMT
+recorded_with: VCR 6.2.0

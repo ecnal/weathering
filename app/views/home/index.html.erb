@@ -1,0 +1,45 @@
+<div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+  <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+    <h1 class="text-center text-3xl font-extrabold text-gray-900">Weathering Weather Forecast</h1>
+
+    <%= form_tag root_path, method: :get, class: "mt-6 sm:max-w-lg sm:mx-auto" do %>
+      <div class="flex">
+        <div class="relative rounded-md shadow-sm grow">
+          <%= text_field_tag :address, @address, class: "w-full pl-10 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm", placeholder: "Enter an address" %>
+        </div>
+        <%= submit_tag 'Get Forecast', name: '', class: "mt-3 inline-flex items-center justify-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" %>
+      </div>
+    <% end %>
+
+    <% if @forecast %>
+      <% if @forecast[:error_message] %>
+        <div class="mt-6 bg-red-400 shadow overflow-hidden sm:rounded-md">
+          <div class="px-4 py-5 sm:px-6">
+            <%= @forecast[:error_message] %>
+          </div>
+        </div>
+      <% else %>
+        <div class="mt-6 bg-white shadow overflow-hidden sm:rounded-md">
+          <div class="px-4 py-5 sm:px-6">
+            <h2 class="text-lg leading-6 font-medium text-gray-900">The Current Weather for <%= @forecast[:location] %></h2>
+          </div>
+          <div class="border-t border-gray-200 px-4 py-5 sm:p-0">
+            <dl class="sm:divide-y sm:divide-gray-200">
+              <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt class="text-sm font-medium text-gray-500">Current Temperature</dt>
+                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                  <%= @forecast[:current_temp] %> &#8457;
+                  <% if @cached %>
+                    <span class="ml-1 text-green-500">
+                      (* returned from cache)
+                    </div>
+                  <% end %>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <% end %>
+    <% end %>
+  </div>
+</div>

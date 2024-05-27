@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.tomorrow.io/v4/weather/realtime?apikey=109876&location=55+Main+St%2C+Quincy%2C+MA+02169&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 26 May 2024 21:24:13 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      cf-ray:
+      - 88a0d4b089006ac9-BOS
+      cf-cache-status:
+      - DYNAMIC
+      access-control-allow-origin:
+      - "*"
+      content-encoding:
+      - gzip
+      via:
+      - 1.1 google
+      cf-apo-via:
+      - origin,host
+      x-correlation-id:
+      - a68ba177-0f32-4526-9275-3e16a1b25666
+      x-db-credits-cost:
+      - '6'
+      x-kong-proxy-latency:
+      - '92'
+      x-kong-upstream-latency:
+      - '41'
+      x-request-id:
+      - 5fc2cae0-0ab8-42b2-86a3-cb48f598cc55
+      set-cookie:
+      - __cf_bm=087BtfNftrWP7q8zt9ceDZGFGvynF70Q4a1LHf636u0-1716758653-1.0.1.1-zMQKZaKnws1jN8TuOictq4q.lAN6AY2rXqSA6ilOXhwkXrvL9ou2G4_lbMzaRv1ULUxPDItsbR3K_EVVklp5Tg;
+        path=/; expires=Sun, 26-May-24 21:54:13 GMT; domain=.tomorrow.io; HttpOnly;
+        Secure; SameSite=None
+      vary:
+      - Accept-Encoding
+      server:
+      - cloudflare
+    body:
+      encoding: UTF-8
+      string: '{"data":{"time":"2024-05-26T21:24:00Z","values":{"cloudBase":null,"cloudCeiling":null,"cloudCover":3,"dewPoint":64.18,"freezingRainIntensity":0,"humidity":73,"precipitationProbability":0,"pressureSurfaceLevel":29.83,"rainIntensity":0,"sleetIntensity":0,"snowIntensity":0,"temperature":73.63,"temperatureApparent":73.63,"uvHealthConcern":0,"uvIndex":1,"visibility":9.94,"weatherCode":1000,"windDirection":94.31,"windGust":9.23,"windSpeed":7.41}},"location":{"lat":42.24699401855469,"lon":-70.99268341064453,"name":"55,
+        Main Street, Quincy Center, Quincy Point, Quincy, Norfolk County, Massachusetts,
+        02169, United States","type":"house"}}'
+  recorded_at: Sun, 26 May 2024 21:24:13 GMT
+recorded_with: VCR 6.2.0

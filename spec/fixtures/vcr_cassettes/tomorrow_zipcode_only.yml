@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.tomorrow.io/v4/weather/realtime?apikey=109876&location=02066&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 26 May 2024 21:22:40 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      cf-ray:
+      - 88a0d2670a408f78-BOS
+      cf-cache-status:
+      - DYNAMIC
+      access-control-allow-origin:
+      - "*"
+      content-encoding:
+      - gzip
+      via:
+      - 1.1 google
+      cf-apo-via:
+      - origin,host
+      x-correlation-id:
+      - 780c479b-2367-4c14-9488-49c6635ffa5f
+      x-db-credits-cost:
+      - '6'
+      x-kong-proxy-latency:
+      - '51'
+      x-kong-upstream-latency:
+      - '25'
+      x-request-id:
+      - b829d287-6988-466f-b5c3-f129a173dfe3
+      set-cookie:
+      - __cf_bm=7t37_3yxy4kwPuVO18RLjMQsvHF0OgWmJ.y4p9ISQ7Y-1716758560-1.0.1.1-jxH6aSHhVUAJ2gk3x6l5l47FSqrtvAfSxKLsLR2lNVzZN68lvtZiZ91RxWP8AltKwLwWVowm3yzRCK4CQg2qdw;
+        path=/; expires=Sun, 26-May-24 21:52:40 GMT; domain=.tomorrow.io; HttpOnly;
+        Secure; SameSite=None
+      vary:
+      - Accept-Encoding
+      server:
+      - cloudflare
+    body:
+      encoding: UTF-8
+      string: '{"data":{"time":"2024-05-26T21:22:00Z","values":{"cloudBase":0.17,"cloudCeiling":null,"cloudCover":16,"dewPoint":61.14,"freezingRainIntensity":0,"humidity":87,"precipitationProbability":0,"pressureSurfaceLevel":29.89,"rainIntensity":0,"sleetIntensity":0,"snowIntensity":0,"temperature":65.08,"temperatureApparent":65.08,"uvHealthConcern":0,"uvIndex":1,"visibility":8.97,"weatherCode":1100,"windDirection":108.38,"windGust":9.23,"windSpeed":6.01}},"location":{"lat":42.199562072753906,"lon":-70.75492858886719,"name":"02066,
+        Scituate, Plymouth County, Massachusetts, United States","type":"postcode"}}'
+  recorded_at: Sun, 26 May 2024 21:22:40 GMT
+recorded_with: VCR 6.2.0

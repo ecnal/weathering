@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.tomorrow.io/v4/weather/realtime?apikey=109876&location=1&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      date:
+      - Sun, 26 May 2024 21:33:42 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '231'
+      connection:
+      - keep-alive
+      cf-ray:
+      - 88a0e291eeaa8f9c-BOS
+      cf-cache-status:
+      - DYNAMIC
+      access-control-allow-origin:
+      - "*"
+      via:
+      - 1.1 google
+      cf-apo-via:
+      - origin,host
+      x-correlation-id:
+      - e2b69b25-7773-425a-bbae-7ca993510bba
+      x-kong-proxy-latency:
+      - '57'
+      x-kong-upstream-latency:
+      - '521'
+      x-request-id:
+      - 0164ca68-3755-4a7b-9ade-e2e74ae47298
+      set-cookie:
+      - __cf_bm=11QKdGqPv3AAHPw.H56WnJGTZZBWXEFt00MNzW3ygvE-1716759222-1.0.1.1-JdjayynXbQpkx4HkOl.L9Jl3LmDcuSKvZoVSR4ToG3CX4sTsRAUgxXlJ3_TDDoFMsqdHgpwHHWsyl7huPnmacA;
+        path=/; expires=Sun, 26-May-24 22:03:42 GMT; domain=.tomorrow.io; HttpOnly;
+        Secure; SameSite=None
+      vary:
+      - Accept-Encoding
+      server:
+      - cloudflare
+    body:
+      encoding: UTF-8
+      string: '{"code":400001,"type":"Invalid Query Parameters","message":"The entries
+        provided as query parameters were not valid for the request. Fix parameters
+        and try again: ''location'' - failed to query by the term ''1'', try a different
+        term"}'
+  recorded_at: Sun, 26 May 2024 21:33:42 GMT
+recorded_with: VCR 6.2.0
