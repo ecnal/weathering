@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.tomorrow.io/v4/weather/realtime?apikey=109876&location=London&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      date:
+      - Tue, 28 May 2024 15:31:21 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '124'
+      connection:
+      - keep-alive
+      cf-ray:
+      - 88af4a87afcf4d0a-BOS
+      cf-cache-status:
+      - DYNAMIC
+      access-control-allow-origin:
+      - "*"
+      via:
+      - 1.1 google
+      cf-apo-via:
+      - origin,host
+      x-kong-response-latency:
+      - '16'
+      set-cookie:
+      - __cf_bm=IQ.IePpQMC33ascK4_jXWWRTqaxzi6olXCVo6ADq5PE-1716910281-1.0.1.1-WSH5I5KNe1zABun5YDz3w4IoxbfevEzcbDoqPw5Net0QzqBl7LWTOrRAF7.gYt0xyj72NcVmYo7SUzMiDl5t9Q;
+        path=/; expires=Tue, 28-May-24 16:01:21 GMT; domain=.tomorrow.io; HttpOnly;
+        Secure; SameSite=None
+      vary:
+      - Accept-Encoding
+      server:
+      - cloudflare
+    body:
+      encoding: UTF-8
+      string: '{"code":401001,"type":"Invalid Auth","message":"The method requires
+        authentication but it was not presented or is invalid."}'
+  recorded_at: Tue, 28 May 2024 15:31:21 GMT
+recorded_with: VCR 6.2.0

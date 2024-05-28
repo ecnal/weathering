@@ -28,5 +28,7 @@ class TomorrowAdapter < WeatherAdapter
     }
   rescue Faraday::BadRequestError
     { error_message: 'No matching address found.' }
+  rescue StandardError
+    { error_message: 'Something went wrong. Please try again later.' }
   end
 end
