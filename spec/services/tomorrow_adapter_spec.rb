@@ -39,5 +39,13 @@ RSpec.describe TomorrowAdapter do
         expect(forecast[:current_temp]).to eq(55.18)
       end
     end
+
+    it 'returns an error message when there is a problem with the endpoint' do
+      VCR.use_cassette('tomorrow_connection_error') do
+        forecast = adapter.get_forecast(no_zipcode)
+        expect(forecast).to be_a(Hash)
+        expect(forecast[:error_message]).to eq('Something went wrong. Please try again later.')
+      end
+    end
   end
 end
