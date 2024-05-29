@@ -47,5 +47,16 @@ RSpec.describe TomorrowAdapter do
         expect(forecast[:error_message]).to eq('Something went wrong. Please try again later.')
       end
     end
+
+    context 'without using VCR for rescuing a StandarError' do
+      before do
+        allow(Faraday).to receive(:get).and_raise(Faraday::TimeoutError)
+      end
+
+      it 'returns an error_message when a TimeoutError occurs' do
+        forecast = adapter.get_forecast(full_address)
+        expect(forecast).to eq({ error_message: 'Something went wrong. Please try again later.' })
+      end
+    end
   end
 end
